@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent;
 
-@Mod(modid = "QuickSW", version = "1.0", acceptedMinecraftVersions = "[1.8,1.8.9]")
+@Mod(modid = "QuickSW", version = "1.1", acceptedMinecraftVersions = "[1.8,1.8.9]")
 public class QuickSWMod {
 
   private static final Minecraft MINECRAFT = Minecraft.getMinecraft();
@@ -39,27 +39,27 @@ public class QuickSWMod {
     }
     switch (e.button.id) {
       case 0:
-        MINECRAFT.thePlayer.sendChatMessage("/play ranked_normal");
-        break;
-  
-      case 1:
         MINECRAFT.thePlayer.sendChatMessage("/play solo_insane");
         break;
   
-      case 2: 
-        MINECRAFT.thePlayer.sendChatMessage("/play solo_normal");
-        break;
-  
-      case 3: 
+      case 1:
         MINECRAFT.thePlayer.sendChatMessage("/play teams_insane");
         break;
   
+      case 2: 
+        MINECRAFT.thePlayer.sendChatMessage("/play solo_normal ");
+        break;
+  
+      case 3: 
+        MINECRAFT.thePlayer.sendChatMessage("/play teams_normal ");
+        break;
+  
       case 4: 
-        MINECRAFT.thePlayer.sendChatMessage("/play teams_normal");
+        MINECRAFT.thePlayer.sendChatMessage("/play mega_normal");
         break;
   
       case 5: 
-        MINECRAFT.thePlayer.sendChatMessage("/play mega_normal");
+        MINECRAFT.thePlayer.sendChatMessage("/play ranked_normal");
         break;
   
       default:
